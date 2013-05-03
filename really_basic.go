@@ -23,7 +23,7 @@ func thingy(derp, quit chan int) {
 		case derp <- x:
 			x, y = y, x+y
 		case <-quit:
-			fmt.Println("Die bitch")
+			fmt.Println("Die die die")
 			return
 		}
 	}
@@ -37,7 +37,7 @@ func main() {
 	}
 	fmt.Println("I can haz: ", da_var)
 
-	data := []float32{3.14, 5.3, 13, 50.32, 10.13, 1513.123132143, 531234.1231}
+	data := []float32{3.14, 5.3, 13, 50.32, 10.13, 1513.123132143, 3234.1231}
 	c := make(chan float32)
 	go a_function(data, c)
 	result := <-c
